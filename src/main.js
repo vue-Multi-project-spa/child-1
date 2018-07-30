@@ -1,12 +1,15 @@
 import App from './App'
+const aaa = ()=>import('./components/aaa')
 
-const register = window.VK.register
+const registerRouter = window.VK.registerRouter
 
-register({
-	name: 'test',
-	component:App,
-	init(){
-
+registerRouter([
+	{
+		path:'/test',
+		component: App
+	},
+	{
+		path:'/test/aaa',
+		component: aaa
 	}
-})
-
+])
