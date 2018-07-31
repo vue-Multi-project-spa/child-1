@@ -6,12 +6,15 @@ const name = 'test'
 const routers = [
 		{
 			path:'/test',
-			component: App
+			component: App,
+			children:[
+				{
+					path:'aaa',
+					component: aaa
+				}
+			]
 		},
-		{
-			path:'/test/aaa',
-			component: aaa
-		}
+		
 	]
 
 
