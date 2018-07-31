@@ -5,6 +5,7 @@
     <button @click="to('ccc')">按钮3</button>
     <button @click="r('/test/aaa')">路由 /test/aaa</button>
     <component :is="current"></component>
+    <router-view></router-view>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 import App from './App'
 const aaa = ()=>import('./components/aaa')
-
+//import aaa from './components/aaa'
 const registerRouter = window.VK.registerRouter
 const name = 'test'
 const routers = [
@@ -9,12 +9,15 @@ const routers = [
 			component: App,
 			children:[
 				{
-					path:'aaa',
+					path:'aaa/:id',
 					component: aaa
 				}
 			]
 		},
-		
+		{
+			path: '/test/:id',
+			component: aaa
+		}
 	]
 
 
