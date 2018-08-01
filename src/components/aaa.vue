@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    
+    <button @click="r('/test/aaa/bbb')">路由 /test/aaa/bbb</button>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -14,6 +15,11 @@ export default {
   },
   created(){
     console.log('aaa',this.$route.params)
+  },
+  methods:{
+    r(path){
+      this.$router.push({path:path})
+    }
   }
 }
 </script>

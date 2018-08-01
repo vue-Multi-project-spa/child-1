@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    
+    <button @click="r('/test')">路由 /test</button>
   </div>
 </template>
 
@@ -10,6 +10,11 @@ export default {
   data () {
     return {
       msg: 'this is child ---ccc component'
+    }
+  },
+  methods:{
+    r(path){
+      this.$router.push({path:path})
     }
   }
 }
