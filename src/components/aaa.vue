@@ -2,6 +2,8 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <button @click="r('/test/aaa/bbb')">路由 /test/aaa/bbb</button>
+    <button @click="back">回退</button>
+    <button @click="r('/child3/3')">路由 /child3/3</button>
     <router-view></router-view>
   </div>
 </template>
@@ -19,6 +21,9 @@ export default {
   methods:{
     r(path){
       this.$router.push({path:path})
+    },
+    back(){
+      VK.back()
     }
   }
 }
