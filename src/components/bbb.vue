@@ -12,6 +12,9 @@ export default {
       msg: 'this is child ---bbb component'
     }
   },
+  created(){
+    console.log('bbb',this.$route)
+  },
   methods:{
     r(path){
       this.$router.push({path:path})
